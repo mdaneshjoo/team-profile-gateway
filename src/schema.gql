@@ -1,0 +1,42 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+"""response for mutations"""
+type BaseMutationModel {
+  """fail reason or success message"""
+  message: String!
+
+  """status of operation"""
+  status: String!
+}
+
+input CreateOrganizationInput {
+  email: String!
+  organizationName: String!
+  password: String!
+  phoneNumber: String!
+}
+
+type Mutation {
+  createOrganization(createOrganizationData: CreateOrganizationInput!): BaseMutationModel!
+}
+
+type Query {
+  user(id: Int!): User!
+}
+
+"""User Schema . Get User Date"""
+type User {
+  """user email"""
+  email: String!
+
+  """Name of User"""
+  firstName: String
+
+  """id of user"""
+  id: Int!
+
+  """last name of user"""
+  lastName: String
+}
